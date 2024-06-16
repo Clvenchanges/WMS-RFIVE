@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="img/eyy.jpeg" sizes="128x128">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="background"></div>
+    <div class="overlay"></div>
+    <div class="form-container">
+        <div class="welcome-section">           
+            <h1>WELCOME</h1>
+            <img src="img/bg.png" alt="Logo" class="logo">
+            <p>Please select your user type and fill in the required details to register.</p>
+            <div class="divider">
+                <hr class="left">
+                <div class="dot"></div>
+                <hr class="right">
+            </div>
+        </div>
+        <div class="divider-vertical"></div>
+        <div class="form-section">
+            <div class="switch-container">
+                <input type="radio" id="student-radio" name="user-type" checked>
+                <label for="student-radio" class="form-span">Student</label>
+                <input type="radio" id="faculty-radio" name="user-type">
+                <label for="faculty-radio" class="form-span">Faculty</label>
+            </div>
+            <hr>
+            <div class="form-wrapper">
+                <div class="form-inner" id="form-inner">
+                    <form id="student-form" class="registration-form" method="POST" action="dbconnection.php">
+                        <h2>Student Registration</h2>
+                        <div class="inputBox">
+                            <input type="text" name="student_first_name" required="required">
+                            <!-- <i class="fa-solid fa-id-card"></i> -->
+                            <i class="fa-solid fa-user"></i>
+                            <span>First Name</span>  
+                        </div>
+                        <div class="inputBox">
+                            <input type="text" name="student_middle_name" required="required">
+                            <i class="fa-solid fa-user"></i>
+                            <span>Middle Name</span>
+                        </div>
+                        <div class="inputBox">
+                            <input type="text" name="student_last_name" required="required">
+                            <i class="fa-solid fa-user"></i>
+                            <span>Last Name</span>
+                        </div>
+                        <div class="inputBox">
+                            <input type="date" name="student_dob" required="required">
+                            <i class="fa-solid fa-cake-candles"></i>
+                            <!-- <span>Date of Birth</span> -->
+                        </div>
+                        <div class="inputBox">
+                            <input type="text" name="student_address" required="required">
+                            <i class="fa-solid fa-address-book"></i>
+                            <span>Address</span>
+                        </div>
+                        <hr>
+                        <button type="submit" name="register_student">Register as Student</button>
+                    </form>
+                    <form id="faculty-form" class="registration-form" method="POST" action="dbconnection.php">
+                        <h2>Faculty Registration</h2>
+                        <div class="inputBox">
+                            <input type="text" name="faculty_first_name" required="required">
+                            <i class="fa-solid fa-user"></i>
+                            <span>First Name</span> 
+                        </div>
+                        <div class="inputBox">
+                            <input type="text" name="faculty_middle_name" required="required">
+                            <i class="fa-solid fa-user"></i>
+                            <span>Middle Name</span>
+                        </div>
+                        <div class="inputBox">
+                            <input type="text" name="faculty_last_name" required="required">
+                            <i class="fa-solid fa-user"></i>
+                            <span>Last Name</span>
+                        </div>
+                        <div class="inputBox">
+                            <input type="date" name="faculty_dob" required="required">
+                            <i class="fa-solid fa-cake-candles"></i>
+                            <!-- <span>Date of Birth</span> -->
+                        </div>
+                        <div class="inputBox">
+                            <input type="text" name="faculty_address" required="required">
+                            <i class="fa-solid fa-address-book"></i>
+                            <span>Address</span>
+                        </div>
+                        <hr>
+                        <button type="submit" name="register_faculty">Register as Faculty</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
